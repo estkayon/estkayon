@@ -1,159 +1,157 @@
-<div align="center">
+<h1 align="center">Hi 👋, I'm Md Estiak Rahman Ayon</h1>
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20,30,40&height=220&section=header&text=Md%20Estiak%20Rahman%20Ayon&fontSize=40&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Software%20Engineer%20%7C%20AI%20%26%20ML%20%7C%20MLOps&descSize=16&descAlignY=62" width="100%" />
+<p align="center">
+  Software & ML enthusiast — building data-driven applications and shipping models to production.
+</p>
 
-  <p>
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&duration=3500&pause=1000&color=A78BFA&center=true&vCenter=true&width=500&lines=Software+Engineer+%7C+Full-Stack+Developer;AI+%2F+ML+%26+MLOps+Practitioner;Building+Scalable+Enterprise+Solutions;Turning+Data+Into+Intelligent+Systems" alt="Typing SVG" />
-  </p>
-
-  <p>
-    <img src="https://img.shields.io/badge/Degree-B.Sc.+in+CSE-7C3AED?style=for-the-badge&logo=codeforces&logoColor=white" />
-    <img src="https://img.shields.io/badge/Location-Dhaka,%20Bangladesh-4C1D95?style=for-the-badge&logo=googlemaps&logoColor=white" />
-  </p>
-
-  <p>
-    <a href="https://linkedin.com/in/estiak-rahman-ayon" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
-    <a href="https://github.com/EstiakAyon" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" /></a>
-    <a href="mailto:estiakayon@gmail.com"><img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=gmail&logoColor=white" /></a>
-  </p>
-
-  <p>
-    <img src="https://komarev.com/ghpvc/?username=EstiakAyon&color=7c3aed&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
-    <img src="https://img.shields.io/github/followers/EstiakAyon?color=7c3aed&style=flat-square&logo=github&label=FOLLOWERS" alt="GitHub Followers" />
-    <img src="https://img.shields.io/github/stars/EstiakAyon?color=7c3aed&style=flat-square&logo=github&label=STARS" alt="GitHub Stars" />
-  </p>
-
-</div>
+<p align="center">
+  <a href="https://www.facebook.com/estiak.ayon99"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white" alt="Facebook"></a>
+  <a href="https://www.instagram.com/_ayooonx7/"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white" alt="Instagram"></a>
+  <a href="https://www.linkedin.com/in/md-estiak-rahman-ayon/"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="mailto:estiakayon@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="https://github.com/estkayon"><img src="https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white" alt="GitHub"></a>
+</p>
 
 ---
 
-## 🚀 About Me
+## 🧑‍💻 About Me
 
-I am a dedicated **Computer Science graduate** and Software Engineer with hands-on industrial R&D experience in building robust, efficient, and scalable full-stack applications[cite: 1] and intelligent systems. My technical foundation spans modern web engineering, data science, machine learning, and MLOps deployment pipelines. I am passionate about writing clean, maintainable code[cite: 1], automating industrial and software workflows, and bridging the gap between raw data and high-performance production applications.
+- 🔭 Currently working on **machine learning projects and end-to-end MLOps pipelines**
+- 🌱 Learning **model deployment, experiment tracking, and CI/CD for ML**
+- 💬 Ask me about **Python, machine learning, web development, and data visualization**
+- 📫 Reach me at **estiakayon@gmail.com**
 
-* **Software Engineering:** Full-stack architecture, secure role-based access controls, and manufacturing automation solutions[cite: 1].
-* **AI/ML & MLOps:** Neural networks, predictive models, experiment tracking, model containerization, and automated deployment pipelines.
-* **Full-Stack Development:** Scalable backend architectures, responsive interfaces, and real-time data handling.
-* **Product Engineering Mindset:** Designing efficient enterprise systems focused on performance, security, and user-centric workflows.
-
-> **Open To:** Software Engineering roles, AI/ML Engineering positions, MLOps opportunities, and high-impact collaborative open-source projects.
+> _Edit the four lines above — they're placeholders based on your stack, not facts about you._
 
 ---
 
-## 🛠️ Tech Stack
+## ⚙️ MLOps
 
-<div align="center">
+The part of ML that isn't the model: getting it into production and keeping it healthy there.
 
-### Languages
-<img src="https://skillicons.dev/icons?i=py,cpp,cs,js,php,r&perline=6" />
+```mermaid
+flowchart LR
+    A[Data Collection] --> B[Data Versioning<br/>DVC]
+    B --> C[Experimentation<br/>MLflow]
+    C --> D[Training Pipeline<br/>Airflow]
+    D --> E[Model Registry<br/>MLflow]
+    E --> F[CI/CD<br/>GitHub Actions]
+    F --> G[Serving<br/>FastAPI + Docker + K8s]
+    G --> H[Monitoring<br/>Prometheus + Grafana]
+    H --> |Drift detected| D
+```
 
-### Frontend Development
-<img src="https://skillicons.dev/icons?i=html,css,bootstrap,tailwind,react,ajax&perline=6" />
+**What each stage covers**
 
-### Backend & Databases
-<img src="https://skillicons.dev/icons?i=nodejs,express,dotnet,fastapi,mysql,mongodb&perline=6" />
+| Stage | Purpose | Tools I use |
+|---|---|---|
+| Data versioning | Reproducible datasets tied to each commit | DVC, Git LFS |
+| Experiment tracking | Compare runs, params, metrics, artifacts | MLflow |
+| Orchestration | Scheduled, retryable training pipelines | Apache Airflow |
+| Packaging | Reproducible environments and images | Docker, Conda |
+| CI/CD | Test, build, and deploy on every merge | GitHub Actions, GitLab CI |
+| Serving | Low-latency inference endpoints | FastAPI, Kubernetes |
+| Monitoring | Latency, throughput, data & concept drift | Prometheus, Grafana |
 
-### Cloud, DevOps & MLOps Tooling
-<img src="https://skillicons.dev/icons?i=git,github,docker,kubernetes,jenkins,linux&perline=6" />
+**Practices I follow**
 
-</div>
+- Every experiment is reproducible: pinned dependencies, versioned data, logged seeds
+- Models are promoted through a registry (staging → production), never copied by hand
+- Training and serving share the same preprocessing code to avoid train/serve skew
+- Rollback is a one-command operation, and monitoring decides when to retrain
 
----
+### 🧰 MLOps Toolkit
 
-## 🧠 AI / ML & MLOps Expertise
-
-| Domain | Proficiency | Details |
-| :--- | :--- | :--- |
-| **Machine Learning & Data Science** | Advanced | Predictive modeling, data preprocessing, classification, and regression using Scikit-Learn, Pandas, and NumPy. |
-| **Deep Learning** | Intermediate | Neural network architecture construction, training optimization, and multi-class classification via TensorFlow and PyTorch. |
-| **MLOps & Pipeline Automation** | Intermediate | Containerizing ML models with Docker, managing deployment workflows with CI/CD, experiment tracking, and orchestration. |
-| **Computer Vision & Processing** | Advanced | Real-time scene rendering, image-based dataset structuring, feature extraction, and automated tracking pipelines. |
-
----
-
-## 💼 Experience
-
-### Software Engineer Intern
-**Walton Hi-Tech Industries PLC** | Gazipur, Dhaka[cite: 1]  
-*Jan 2026 – Apr 2026*[cite: 1]
-
-* Designed and developed full-stack web applications using PHP, MySQL, JavaScript, and Bootstrap, featuring secure role-based access control and reliable data handling[cite: 1].
-* Implemented core features such as product tracking, reporting systems, and workflow management to support fast-paced industrial operations[cite: 1].
-* Contributed directly to manufacturing automation initiatives by delivering software solutions that minimized manual intervention and optimized production flows[cite: 1].
-* Collaborated with cross-functional teams to test, deploy, and refine system improvements, boosting overall performance metrics[cite: 1].
-
-`PHP` `MySQL` `JavaScript` `Bootstrap` `Workflow Automation` `REST APIs`
-
----
-
-## 💻 Coding Profiles
-
-<div align="center">
-
-<a href="https://github.com/EstiakAyon"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" /></a>
-<a href="https://github.com/EstiakAyon"><img src="https://img.shields.io/badge/GeeksforGeeks-298D46?style=for-the-badge&logo=geeksforgeeks&logoColor=white" /></a>
-<a href="https://github.com/EstiakAyon"><img src="https://img.shields.io/badge/HackerRank-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black" /></a>
-<a href="https://github.com/EstiakAyon"><img src="https://img.shields.io/badge/CodeChef-5B4638?style=for-the-badge&logo=codechef&logoColor=white" /></a>
-
-</div>
+![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=for-the-badge&logo=mlflow&logoColor=white)
+![DVC](https://img.shields.io/badge/DVC-13ADC7?style=for-the-badge&logo=dvc&logoColor=white)
+![Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![GitLab CI](https://img.shields.io/badge/gitlab%20CI-%23FC6D26.svg?style=for-the-badge&logo=gitlab&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/grafana-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 ---
 
-## 📊 GitHub Analytics
+## 💻 Tech Stack
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=EstiakAyon&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7c3aed&icon_color=a78bfa" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=EstiakAyon&theme=tokyonight&hide_border=true&background=1a1b26&stroke=7c3aed&ring=7c3aed&fire=a78bfa&sideNums=fff" width="48%" />
-  <br>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=EstiakAyon&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7c3aed" width="60%" />
-</div>
+**Languages**
+
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)
+![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white)
+
+**Machine Learning & Data**
+
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
+![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-%23FE4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white)
+![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
+![Power BI](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+
+**Web & Frameworks**
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%237952B3.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Apache](https://img.shields.io/badge/apache-%23D42029.svg?style=for-the-badge&logo=apache&logoColor=white)
+
+**Databases**
+
+![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+
+**Tools & Other**
+
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![GitLab](https://img.shields.io/badge/gitlab-%23FC6D26.svg?style=for-the-badge&logo=gitlab&logoColor=white)
+![OpenGL](https://img.shields.io/badge/OpenGL-%235586A4.svg?style=for-the-badge&logo=opengl&logoColor=white)
+![Cisco](https://img.shields.io/badge/cisco-%23049fd9.svg?style=for-the-badge&logo=cisco&logoColor=black)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+![Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white)
+![Lightroom](https://img.shields.io/badge/Adobe%20Lightroom-31A8FF.svg?style=for-the-badge&logo=adobelightroom&logoColor=white)
+![Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-9999FF.svg?style=for-the-badge&logo=adobepremierepro&logoColor=white)
 
 ---
 
-## 🏆 GitHub Trophies
+## 📊 GitHub Stats
 
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=EstiakAyon&theme=tokyonight&no-bg=true&margin-w=4&margin-h=4" />
-</div>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=estkayon&show_icons=true&theme=dark&hide_border=false&include_all_commits=true&count_private=true" alt="GitHub stats" />
+</p>
 
----
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=estkayon&theme=dark&hide_border=false" alt="GitHub streak" />
+</p>
 
-## 📈 Contribution Activity
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=EstiakAyon&theme=tokyonight&hide_border=true&bg_color=1a1b26&color=7c3aed&line=a78bfa&point=fff" width="100%" />
-</div>
-
----
-
-## 🐍 Contribution Snake
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" width="100%" alt="Snake Animation" />
-</div>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=estkayon&theme=dark&hide_border=false&layout=compact&langs_count=8" alt="Top languages" />
+</p>
 
 ---
 
-## 🎯 Current Focus
-
-```yaml
-learning:
-  - Advanced MLOps Pipelines & Model Orchestration
-  - Kubernetes & Cloud-Native Architecture
-  - Scalable Microservices Design
-
-building:
-  - Industrial Automation Software Suites
-  - Machine Learning Classification Workflows
-  - Full-Stack Web Applications
-
-exploring:
-  - Enterprise AI Integration
-  - Automated CI/CD for Data Science Models
-  - High-Performance Backend Systems
-
-open_to:
-  - Software Engineering Roles
-  - AI / ML Engineering Positions
-  - MLOps & Infrastructure Roles
-  - High-Impact Open-Source Collaborations
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=estkayon&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
+</p>
