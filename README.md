@@ -163,20 +163,12 @@ Full-stack: I build the interface, the API behind it, and the schema underneath.
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img width="49%" src="./assets/stats.svg" alt="GitHub stats" />
-  <img width="41%" src="./assets/top-langs.svg" alt="Top languages" />
+  <img width="49%" src="https://github-readme-stats.shion.dev/api?username=estkayon&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" alt="GitHub stats" />
+  <img width="41%" src="https://github-readme-stats.shion.dev/api/top-langs/?username=estkayon&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" alt="Top languages" />
 </p>
 
 <p align="center">
-  <img src="./assets/streak.svg" alt="GitHub streak" />
-</p>
-
-
-### 📈 Activity Overview
-
-<p align="center">
-  <img width="49%" src="https://raw.githubusercontent.com/estkayon/estkayon/profile-summary-card-output/profile-summary-card-output/tokyonight/1-repos-per-language.svg" />
-  <img width="49%" src="https://raw.githubusercontent.com/estkayon/estkayon/profile-summary-card-output/profile-summary-card-output/tokyonight/2-most-commit-language.svg" />
+  <img src="https://streak-stats.demolab.com/?user=estkayon&hide_border=true&background=0D1117&border=0D1117&stroke=FF6B00&ring=FF4500&fire=FF4500&currStreakNum=FF6B00&currStreakLabel=FF4500&sideNums=FFFFFF&sideLabels=FFA500&dates=8B949E" alt="GitHub streak" />
 </p>
 
 <p align="center">
