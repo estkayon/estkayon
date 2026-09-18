@@ -171,10 +171,16 @@ Full-stack: I build the interface, the API behind it, and the schema underneath.
   <img src="https://streak-stats.demolab.com/?user=estkayon&hide_border=true&background=0D1117&border=0D1117&stroke=FF6B00&ring=FF4500&fire=FF4500&currStreakNum=FF6B00&currStreakLabel=FF4500&sideNums=FFFFFF&sideLabels=FFA500&dates=8B949E" alt="GitHub streak" />
 </p>
 
-### 📈 Contribution Graph
+### 📈 Activity Overview
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=estkayon&bg_color=0D1117&color=39d353&line=39d353&point=FFFFFF&area=true&hide_border=true" alt="Contribution graph" width="100%" />
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=estkayon&theme=tokyonight" />
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=estkayon&theme=tokyonight" />
+</p>
+
+<p align="center">
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=estkayon&theme=tokyonight" />
+  <img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=estkayon&theme=tokyonight&utcOffset=6" />
 </p>
 
 ### 🐍 Watch the snake eat my contributions
