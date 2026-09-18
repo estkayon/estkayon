@@ -163,8 +163,8 @@ Full-stack: I build the interface, the API behind it, and the schema underneath.
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=estkayon&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub stats" />
-  <img width="41%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=estkayon&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" alt="Top languages" />
+  <img width="49%" src="https://github-readme-stats.shion.dev/api?username=estkayon&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub stats" />
+  <img width="41%" src="https://github-readme-stats.shion.dev/api/top-langs/?username=estkayon&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" alt="Top languages" />
 </p>
 
 <p align="center">
@@ -174,7 +174,7 @@ Full-stack: I build the interface, the API behind it, and the schema underneath.
 ### 📈 Contribution Graph
 
 <p align="center">
-  <img src="https://ghchart.rshah.org/00D9FF/estkayon" alt="Contribution chart" width="90%" />
+  <img src="https://ghchart.rshah.org/39d353/estkayon" alt="Contribution chart" width="90%" />
 </p>
 
 <!--
@@ -193,19 +193,15 @@ Full-stack: I build the interface, the API behind it, and the schema underneath.
 
 ## 📌 Featured Projects
 
+| Project | What it does | Stack |
+|---|---|---|
+| **[Vehicle Insurance MLOps](https://github.com/estkayon/MLOps-Project---Vehicle-Insurance-Domain)** | End-to-end ML pipeline for insurance claim prediction, from ingestion to deployment | `Python` `MLflow` `Docker` `AWS` |
+| **[MLOps Capstone](https://github.com/estkayon/MLOps-Capstone-Project)** | Production-grade ML workflow with experiment tracking, CI/CD  | `Python` `MLflow` `FastAPI` `DVC` `Docker` `AWS` |
+| **[Restaurant Management System](https://github.com/estkayon/Restaurant-Management-System)** | Full-stack app for orders, menu and billing | `PHP` `JavaScript` `MySQL` |
+| **[Inventory Management System](https://github.com/estkayon/Inventory-Management-System)** | Stock tracking with reporting and role-based access | `PHP` `MySQL` `Bootstrap` |
+
 <p align="center">
-  <a href="https://github.com/estkayon/MLOps-Project---Vehicle-Insurance-Domain">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=estkayon&repo=MLOps-Project---Vehicle-Insurance-Domain&theme=tokyonight&hide_border=true" />
-  </a>
-  <a href="https://github.com/estkayon/MLOps-Capstone-Project">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=estkayon&repo=MLOps-Capstone-Project&theme=tokyonight&hide_border=true" />
-  </a>
-  <a href="https://github.com/estkayon/Restaurant-Management-System">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=estkayon&repo=Restaurant-Management-System&theme=tokyonight&hide_border=true" />
-  </a>
-  <a href="https://github.com/estkayon/Inventory-Management-System">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=estkayon&repo=Inventory-Management-System&theme=tokyonight&hide_border=true" />
-  </a>
+  <a href="https://github.com/estkayon?tab=repositories"><b>→ See all repositories</b></a>
 </p>
 
 ---
@@ -221,7 +217,6 @@ Full-stack: I build the interface, the API behind it, and the schema underneath.
 <p align="center">
   <b>Thanks for visiting! If something here is useful, a ⭐ goes a long way.</b><br>
   <a href="mailto:estiakayon@gmail.com">📩 Let's talk</a> •
-  <a href="https://www.linkedin.com/in/md-estiak-rahman-ayon/">💼 LinkedIn</a>
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=140&section=footer" width="100%" />
