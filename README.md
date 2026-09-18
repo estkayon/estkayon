@@ -174,14 +174,8 @@ Full-stack: I build the interface, the API behind it, and the schema underneath.
 ### 📈 Contribution Graph
 
 <p align="center">
-  <img src="https://ghchart.rshah.org/39d353/estkayon" alt="Contribution chart" width="90%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=estkayon&bg_color=0D1117&color=39d353&line=39d353&point=FFFFFF&area=true&hide_border=true" alt="Contribution graph" width="100%" />
 </p>
-
-<!--
-  Alternative activity graph (prettier, but the service is often rate-limited —
-  uncomment only if it loads for you):
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=estkayon&theme=tokyo-night&hide_border=true&area=true" />
--->
 
 ### 🐍 Watch the snake eat my contributions
 
