@@ -168,7 +168,7 @@ Full-stack: I build the interface, the API behind it, and the schema underneath.
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=estkayon&theme=tokyonight&hide_border=true" alt="GitHub streak" />
+  <img src="https://streak-stats.demolab.com/?user=estkayon&hide_border=true&background=0D1117&border=0D1117&stroke=FF6B00&ring=FF4500&fire=FF4500&currStreakNum=FF6B00&currStreakLabel=FF4500&sideNums=FFFFFF&sideLabels=FFA500&dates=8B949E" alt="GitHub streak" />
 </p>
 
 ### 📈 Contribution Graph
@@ -195,19 +195,18 @@ Full-stack: I build the interface, the API behind it, and the schema underneath.
 
 <p align="center">
   <a href="https://github.com/estkayon/MLOps-Project---Vehicle-Insurance-Domain">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=estkayon&repo=REPO-ONE&theme=tokyonight&hide_border=true" />
+    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=estkayon&repo=MLOps-Project---Vehicle-Insurance-Domain&theme=tokyonight&hide_border=true" />
   </a>
   <a href="https://github.com/estkayon/MLOps-Capstone-Project">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=estkayon&repo=REPO-TWO&theme=tokyonight&hide_border=true" />
+    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=estkayon&repo=MLOps-Capstone-Project&theme=tokyonight&hide_border=true" />
   </a>
   <a href="https://github.com/estkayon/Restaurant-Management-System">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=estkayon&repo=REPO-TWO&theme=tokyonight&hide_border=true" />
+    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=estkayon&repo=Restaurant-Management-System&theme=tokyonight&hide_border=true" />
   </a>
   <a href="https://github.com/estkayon/Inventory-Management-System">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=estkayon&repo=REPO-TWO&theme=tokyonight&hide_border=true" />
+    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=estkayon&repo=Inventory-Management-System&theme=tokyonight&hide_border=true" />
   </a>
 </p>
-
 
 ---
 
