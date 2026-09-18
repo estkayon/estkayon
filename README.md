@@ -8,8 +8,6 @@
 
   <p>
     <img src="https://img.shields.io/badge/Degree-B.Sc.+in+CSE-7C3AED?style=for-the-badge&logo=codeforces&logoColor=white" />
-    <img src="https://img.shields.io/badge/CGPA-3.53%2F4.00-6D28D9?style=for-the-badge&logo=gradles&logoColor=white" />
-    <img src="https://img.shields.io/badge/Experience-R%26D+Intern-5B21B6?style=for-the-badge&logo=arduino&logoColor=white" />
     <img src="https://img.shields.io/badge/Location-Dhaka,%20Bangladesh-4C1D95?style=for-the-badge&logo=googlemaps&logoColor=white" />
   </p>
 
@@ -85,24 +83,6 @@ I am a dedicated **Computer Science graduate** and Software Engineer with hands-
 * Collaborated with cross-functional teams to test, deploy, and refine system improvements, boosting overall performance metrics[cite: 1].
 
 `PHP` `MySQL` `JavaScript` `Bootstrap` `Workflow Automation` `REST APIs`
-
----
-
-## 📜 Certifications
-
-<div align="center">
-
-<img src="https://img.shields.io/badge/AWS-Cloud_Practitioner-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" />
-<img src="https://img.shields.io/badge/Oracle-Cloud_Infrastructure-F80000?style=for-the-badge&logo=oracle&logoColor=white" />
-<img src="https://img.shields.io/badge/NPTEL-Machine_Learning-002D62?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-<img src="https://img.shields.io/badge/Cisco-Networking_Essentials-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" />
-<br>
-<img src="https://img.shields.io/badge/British_Airways-Data_Science_Sim-012169?style=for-the-badge&logo=BritishAirways&logoColor=white" />
-<img src="https://img.shields.io/badge/Electronic_Arts-Software_Eng_Sim-FF4500?style=for-the-badge&logo=electronicarts&logoColor=white" />
-<img src="https://img.shields.io/badge/Microsoft-Power_BI_Beginner-F25022?style=for-the-badge&logo=microsoft&logoColor=white" />
-<img src="https://img.shields.io/badge/SimpliLearn-Generative_AI_Literacy-0056B3?style=for-the-badge&logo=simplilearn&logoColor=white" />
-
-</div>
 
 ---
 
