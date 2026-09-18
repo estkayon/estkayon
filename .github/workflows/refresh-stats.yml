@@ -1,0 +1,44 @@
+name: Refresh Stats Cards
+
+on:
+  schedule:
+    # Every 6 hours
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download cards
+        run: |
+          mkdir -p assets
+
+          fetch () {
+            # $1 = url, $2 = destination file
+            if curl -fsSL --retry 3 --retry-delay 15 "$1" -o /tmp/card.svg \
+               && head -c 200 /tmp/card.svg | grep -q "<svg" \
+               && ! grep -qi "rate limited\|error" /tmp/card.svg; then
+              mv /tmp/card.svg "$2"
+              echo "updated $2"
+            else
+              echo "skipped $2 (service unavailable) — keeping previous version"
+            fi
+          }
+
+          fetch "https://github-readme-stats.shion.dev/api?username=estkayon&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" assets/stats.svg
+          fetch "https://github-readme-stats.shion.dev/api/top-langs/?username=estkayon&theme=tokyonight&hide_border=true&layout=compact&langs_count=8" assets/top-langs.svg
+          fetch "https://streak-stats.demolab.com/?user=estkayon&hide_border=true&background=0D1117&border=0D1117&stroke=FF6B00&ring=FF4500&fire=FF4500&currStreakNum=FF6B00&currStreakLabel=FF4500&sideNums=FFFFFF&sideLabels=FFA500&dates=8B949E" assets/streak.svg
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git diff --staged --quiet || git commit -m "chore: refresh stats cards"
+          git push
