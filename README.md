@@ -90,30 +90,6 @@ Time-series forecasting with a full MLOps delivery pipeline: versioned data, tra
 </td>
 <td width="50%" valign="top">
 
-#### 🩻 [BanglaCXR](https://github.com/estkayon/BanglaCXR-Vision-Language-Report-Generation)
-Undergraduate thesis: a two-stage vision-language pipeline that writes Bangla chest X-ray reports — RAD-DINO + anatomy-guided projector + Phi-3.5 Mini, with NLLB-200 translation and QLoRA.
-
-![PyTorch](https://img.shields.io/badge/PyTorch-0B1427?style=flat-square&logo=pytorch&logoColor=F4A63A)
-![Hugging Face](https://img.shields.io/badge/Hugging_Face-0B1427?style=flat-square&logo=huggingface&logoColor=F4A63A)
-![QLoRA](https://img.shields.io/badge/QLoRA-0B1427?style=flat-square&logo=python&logoColor=F4A63A)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-#### 🧰 [Vehicle Insurance MLOps](https://github.com/estkayon/MLOps-Project---Vehicle-Insurance-Domain)
-Modular end-to-end machine learning: ingestion, training, evaluation and deployment-oriented engineering.
-
-![Python](https://img.shields.io/badge/Python-0B1427?style=flat-square&logo=python&logoColor=F4A63A)
-![FastAPI](https://img.shields.io/badge/FastAPI-0B1427?style=flat-square&logo=fastapi&logoColor=F4A63A)
-![DVC](https://img.shields.io/badge/DVC-0B1427?style=flat-square&logo=dvc&logoColor=F4A63A)
-![MLflow](https://img.shields.io/badge/MLflow-0B1427?style=flat-square&logo=mlflow&logoColor=F4A63A)
-![Docker](https://img.shields.io/badge/Docker-0B1427?style=flat-square&logo=docker&logoColor=F4A63A)
-
-</td>
-<td width="50%" valign="top">
-
 #### 🛒 [E-commerce Management System](https://github.com/estkayon/Ecommerce-Management-System)
 Laravel MVC backend for real business workflows: relational data modeling, Sanctum auth, validation and REST APIs.
 

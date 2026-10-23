@@ -78,14 +78,41 @@ def main(src: str) -> None:
     bg = remove_avatar(bg)
     cv2.imwrite(str(OUT / "hero.jpg"), bg, [cv2.IMWRITE_JPEG_QUALITY, 92])
 
-    cv2.imwrite(str(OUT / "ship.jpg"), im[370:661, 410:987], [cv2.IMWRITE_JPEG_QUALITY, 90])
+    # sunset ship: remove the small quote box and the name card (the quote is redrawn full-panel).
+    # Each area is refilled with mirrored tiles of the sky/sea just right of the ship, then feathered.
+    ship = im[370:661, 410:987].copy()
+    fill = ship.copy()
+    def mirror_tile(rows, start, end, band_left):
+        bw = start - band_left
+        for c in range(start, end):
+            k, r = divmod(c - start, bw)
+            src = start - 1 - r if k % 2 == 0 else band_left + r
+            fill[rows, c] = ship[rows, src]
+    mirror_tile(slice(118, 291), 318, 577, 250)   # sea right of the ship
+    mirror_tile(slice(0, 118), 354, 577, 250)     # sky right of the sails
+    sm = np.zeros(ship.shape[:2], np.float32)
+    sm[118:291, 318:577] = 1
+    sm[0:118, 354:577] = 1
+    soft = cv2.GaussianBlur(sm, (0, 0), 9)[..., None]
+    ship = (ship * (1 - soft) + fill * soft).astype(np.uint8)
+    cv2.imwrite(str(OUT / "ship.jpg"), ship, [cv2.IMWRITE_JPEG_QUALITY, 90])
     cv2.imwrite(str(OUT / "city.jpg"), im[995:1178, 40:812], [cv2.IMWRITE_JPEG_QUALITY, 90])
 
+    # footer: keep only the art — remove the baked title, every contact chip and the quote
+    # (the quote is redrawn crisp and larger on top)
     footer = im[1266:1536, 0:1024].copy()
     fm = np.zeros(footer.shape[:2], np.uint8)
-    fm[56:92, 596:742] = 255       # old email chip
-    fm[56:92, 84:346] = 255        # old GitHub + LinkedIn chips (the YouTube one sits under a new chip)
-    cv2.imwrite(str(OUT / "footer.jpg"), cv2.inpaint(footer, fm, 12, cv2.INPAINT_TELEA), [cv2.IMWRITE_JPEG_QUALITY, 92])
+    fm[56:92, 596:742] = 255                                            # email chip
+    fm[56:92, 84:346] = 255                                             # GitHub + LinkedIn chips
+    fm[12:56, 30:80] = 255                                              # title skull logo
+    fm |= text_mask(footer, (80, 10, 392, 56), v_min=120, s_max=120)    # "OPEN CHANNEL / let's connect"
+    fm |= text_mask(footer, (280, 12, 392, 42), v_min=110, s_max=140, cyan=True)  # "/ let's connect"
+    fm[44:52, 84:250] = 255                                             # title underline
+    fm |= text_mask(footer, (490, 54, 590, 94), v_min=150, s_max=80)    # YouTube chip text + icon
+    fm[58:90, 494:524] = 255                                            # its round icon
+    fm |= text_mask(footer, (340, 178, 690, 242), v_min=150, s_max=90)  # the quote
+    fm = cv2.dilate(fm, np.ones((5, 5), np.uint8), iterations=1)
+    cv2.imwrite(str(OUT / "footer.jpg"), cv2.inpaint(footer, fm, 9, cv2.INPAINT_TELEA), [cv2.IMWRITE_JPEG_QUALITY, 92])
     print("images written to", OUT)
 
 

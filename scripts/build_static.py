@@ -28,7 +28,7 @@ HERO = {
 }
 PROFILE = [
     ("user", "name", "Md. Estiak Rahman Ayon"),
-    ("badge", "nickname", "Ayon"),
+    ("badge", "nickname", "Ayon / ER"),
     ("cap", "education", "AIUB (BSc CSE)"),
     ("cal", "graduation", "Aug 2026 (Completed)"),
     ("pin", "location", "Dhaka, Bangladesh"),
@@ -55,6 +55,8 @@ CONTACT = [  # (icon, text) — drawn on the footer banner; None = gap over the 
 # Live pipeline strip (Mission 01: Bangladesh electricity demand forecasting)
 PIPELINE = [("data", "DVC", "versioned data"), ("train", "Train", "& evaluate"), ("track", "MLflow", "DagsHub"),
             ("serve", "FastAPI", "model API"), ("dash", "Streamlit", "dashboard"), ("ship", "Docker", "CI/CD · Render")]
+
+DOCKER_PATH = "M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"  # Simple Icons "docker", CC0
 
 EASE = 'calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"'
 
@@ -353,7 +355,7 @@ def captains_log() -> None:
 # ------------------------------------------------------------------ MLOps pipeline strip
 def pipeline() -> None:
     W, H = 1000, 124
-    icons = {"data": "db", "train": "brain", "track": "chart", "serve": "bolt", "dash": "code", "ship": "ship"}
+    icons = {"data": "db", "train": "brain", "track": "chart", "serve": "bolt", "dash": "code", "ship": "box"}
     n = len(PIPELINE)
     x0, x1 = 24, W - 24
     gap = 26
@@ -371,7 +373,10 @@ def pipeline() -> None:
                 f'keyTimes="0;{k:.3f};{(k+k2)/2:.3f};{k2:.3f};1" dur="{cyc}s" repeatCount="indefinite"/>')
         parts.append(f'<rect x="{bx:.1f}" y="{by}" width="{bw:.1f}" height="{bh}" rx="10" fill="{C["panel2"]}" '
                      f'stroke="{C["gold"]}" stroke-opacity=".35" stroke-width="1.4">{glow}</rect>')
-        parts.append(icon(icons[key], bx + 14, by + 14, 22, C["cyan"] if key != "ship" else C["green"]))
+        if key == "ship":   # the real Docker whale (Simple Icons, CC0)
+            parts.append(f'<path transform="translate({bx+13:.1f} {by+15}) scale(.95)" fill="#2496ED" d="{DOCKER_PATH}"/>')
+        else:
+            parts.append(icon(icons[key], bx + 14, by + 14, 22, C["cyan"]))
         parts.append(f'<text x="{bx+46:.1f}" y="{by+27}" class="mb" font-size="13" fill="{C["text"]}">{t(label)}</text>')
         parts.append(f'<text x="{bx+46:.1f}" y="{by+45}" class="m" font-size="10" fill="{C["muted"]}">{t(sub)}</text>')
         # status light: lights up while its stage runs, stays green afterwards in the cycle
@@ -427,43 +432,56 @@ def chip_icon(kind: str, x: float, y: float) -> str:
     return g
 
 
+FOOTER_QUOTE = ("“As long as I live, there are infinite chances!”", "— Monkey D. Luffy")
+
+
 def footer() -> None:
+    """Crew banner with only the quote on top: a light shadow over the art, a deeper soft shadow
+    behind the quote, and the same slow zoom + light sweep as before."""
     W, H = 1024, 270
-    chips, x = [], 44
-    for item in CONTACT:
-        if item is None:      # leave the area above the captain's hat clear
-            x = max(x, 486)
-            continue
-        kind, text = item
-        w = 34 + len(text) * 7.0 + 12
-        chips.append(
-            f'<g><rect x="{x}" y="57" width="{w:.0f}" height="30" rx="15" fill="#08101f" fill-opacity=".93" stroke="{C["line2"]}"/>'
-            f'{chip_icon(kind, x + 16, 72)}'
-            f'<text x="{x+33}" y="76.5" class="m" font-size="11.5" fill="{C["text"]}">{t(text)}</text></g>'
-        )
-        x += w + 6
+    quote, who = FOOTER_QUOTE
+    QY = 196
     body = f"""
 <defs><clipPath id="r"><rect width="{W}" height="{H}" rx="14"/></clipPath>
-<linearGradient id="top" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050b18" stop-opacity=".7"/>
-<stop offset=".22" stop-color="#050b18" stop-opacity="0"/></linearGradient>
 <linearGradient id="sweep" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/>
-<stop offset=".5" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+<stop offset=".5" stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="qshade" cx="512" cy="{QY+10}" r="1" gradientUnits="userSpaceOnUse"
+  gradientTransform="translate(512 {QY+10}) scale(420 92) translate(-512 {-(QY+10)})">
+  <stop offset="0" stop-color="#030712" stop-opacity=".78"/><stop offset=".6" stop-color="#030712" stop-opacity=".45"/>
+  <stop offset="1" stop-color="#030712" stop-opacity="0"/></radialGradient>
+<linearGradient id="topfade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050b18" stop-opacity=".5"/>
+<stop offset=".42" stop-color="#050b18" stop-opacity="0"/></linearGradient>
+<filter id="qs" x="-10%" y="-60%" width="120%" height="220%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity=".9"/></filter>
+</defs>
 <g clip-path="url(#r)">
   {ken_burns(image_uri('footer.jpg'), W, H, 512, 200, 1.05, 28, pan=(8, 0))}
-  <rect width="{W}" height="{H}" fill="url(#top)"/>
+  <rect width="{W}" height="{H}" fill="#050b18" fill-opacity=".32"/>
+  <rect width="{W}" height="{H}" fill="url(#topfade)"/>
+  <rect width="{W}" height="{H}" fill="url(#qshade)"/>
   <rect x="-300" y="0" width="220" height="{H}" fill="url(#sweep)" transform="skewX(-18)">
     <animate attributeName="x" values="-320;1400" dur="14s" repeatCount="indefinite"/></rect>
   <rect x="0" y="0" width="{W}" height="2" fill="{C['gold']}" fill-opacity=".6"/>
-  <rect x="24" y="9" width="392" height="42" rx="21" fill="#08101f" fill-opacity=".93" stroke="{C['line2']}"/>
-  {icon('skull', 38, 15, 30, '#ffffff')}
-  <text x="80" y="39" class="s" font-size="22" fill="#fff"><tspan textLength="196" lengthAdjust="spacing">OPEN CHANNEL</tspan><tspan dx="12" dy="-1" class="m" font-weight="400" font-size="13" fill="{C['cyan']}">/ let's connect</tspan></text>
-  {''.join(chips)}
+  <text x="512" y="{QY}" text-anchor="middle" class="b" font-size="34" fill="#ffffff" filter="url(#qs)">{t(quote)}</text>
+  <text x="512" y="{QY+34}" text-anchor="middle" class="b" font-size="19" fill="{C['gold2']}" filter="url(#qs)">{t(who)}</text>
 </g>
 <rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="14" fill="none" stroke="{C['line2']}"/>"""
-    write("footer.svg", svg(W, H, body, fonts=("Cinzel", "JBM", "JBMB"), title="Open channel — let's connect"))
+    write("footer.svg", svg(W, H, body, fonts=("Brush",), title=f"{quote} {who}"))
+
+
+def docker_badge() -> None:
+    """Self-hosted Docker badge, so the logo never depends on an outside badge service."""
+    W, H = 74, 20
+    body = (f'<rect width="{W}" height="{H}" fill="#0B1427"/>'
+            f'<path transform="translate(6 3) scale(.58)" fill="#F4A63A" d="{DOCKER_PATH}"/>'
+            f'<text x="26" y="14" font-family="Verdana,DejaVu Sans,sans-serif" font-size="11" fill="#fff">Docker</text>')
+    (OUT / "badge-docker.svg").write_text(
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" role="img" aria-label="Docker"><title>Docker</title>{body}</svg>',
+        encoding="utf-8")
+    print("wrote assets/badge-docker.svg")
 
 
 if __name__ == "__main__":
+    docker_badge()
     hero()
     captains_log()
     header("head-captains-log.svg", "helm", "CAPTAIN'S LOG", "about me")
