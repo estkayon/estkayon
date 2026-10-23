@@ -1,7 +1,7 @@
 """Build the static (but animated) profile visuals into assets/.
 
 Run:  python scripts/build_static.py
-Edit the PROFILE / FOCUS / SHIP_CARD / HERO / CONTACT blocks below and re-run
+Edit the PROFILE / FOCUS / QUOTE / HERO / CONTACT blocks below and re-run
 whenever your details change.
 
 Animation rule used everywhere: the element's own attributes describe the
@@ -28,10 +28,9 @@ HERO = {
 }
 PROFILE = [
     ("user", "name", "Md. Estiak Rahman Ayon"),
-    ("badge", "nickname", "Ayon / ER"),
+    ("badge", "nickname", "Ayon"),
     ("cap", "education", "AIUB (BSc CSE)"),
     ("cal", "graduation", "Aug 2026 (Completed)"),
-    ("star", "cgpa", "3.54 / 4.00"),
     ("pin", "location", "Dhaka, Bangladesh"),
     ("clock", "timezone", "GMT +6"),
 ]
@@ -41,12 +40,11 @@ FOCUS = [
     "Scalable systems & automation",
     "Open source & continuous learning",
 ]
-SHIP_CARD = [  # the little card on the sunset-ship panel
-    ("Current Focus", "MLOps / AI"),
-    ("Next Goal", "Cloud + Scalable Systems"),
-    ("Dream", "Build something meaningful"),
-    ("Location", "Dhaka, Bangladesh"),
-]
+QUOTE = {  # written word by word across the sunset-ship panel
+    "lines": [["A", "small", "step"], ["each", "day"], ["builds", "a", "big", "dream."]],
+    "gold": {"big", "dream."},
+    "sign": "— Ayon",
+}
 CONTACT = [  # (icon, text) — drawn on the footer banner; None = gap over the captain's hat
     ("gh", "@estkayon"),
     ("in", "md-estiak-rahman-ayon"),
@@ -266,11 +264,11 @@ def header(file: str, ico: str, title: str, sub: str) -> None:
 
 # ------------------------------------------------------------------ captain's log
 def captains_log() -> None:
-    W, H = 1000, 322
+    W = 1000
     LW = 364
     rows = []
     for i, (ic, k, v) in enumerate(PROFILE):
-        y = 36 + i * 24
+        y = 37 + i * 26
         rows.append(
             f'<g>{grow("opacity", 0, 1, .15 * i, .5)}'
             f'{icon(ic, 20, y - 13, 16, C["text"])}'
@@ -278,47 +276,78 @@ def captains_log() -> None:
             f'<text x="142" y="{y}" class="m" font-size="13" fill="{C["muted"]}">:</text>'
             f'<text x="156" y="{y}" class="m" font-size="13" fill="{C["cyan"]}">{t(v)}</text></g>'
         )
-    fy = 36 + len(PROFILE) * 24 - 4
+    fy = 37 + len(PROFILE) * 26 - 4
     focus = [
         f'<line x1="20" x2="{LW-20}" y1="{fy}" y2="{fy}" stroke="{C["line2"]}"/>',
         icon("gear", 18, fy + 14, 20, C["gold"]),
         f'<text x="50" y="{fy+29}" class="mb" font-size="13" fill="{C["gold"]}">current focus :</text>',
     ]
     for j, f in enumerate(FOCUS):
-        y = fy + 48 + j * 20
+        y = fy + 46 + j * 21
         focus.append(
             f'<text x="50" y="{y}" class="m" font-size="12.5" fill="{C["cyan"]}">'
             f'<tspan fill="{C["gold"]}">• </tspan>{t(f)}</text>'
         )
-    cur_y = fy + 48 + (len(FOCUS) - 1) * 20
+    cur_y = fy + 46 + (len(FOCUS) - 1) * 21
     cur_x = 50 + (len(FOCUS[-1]) + 2) * 7.55 + 6
     focus.append(f'<rect x="{cur_x:.0f}" y="{cur_y-11}" width="7" height="13" fill="{C["gold"]}">{blink()}</rect>')
+    H = cur_y + 26
 
     RX, RW = LW + 16, W - LW - 16
-    # The ship photo is 577x291; at this panel size it is scaled 1.1065x and right-aligned.
-    CX, CY = 700, 134                      # our card covers the photo's original name card
-    card = [
-        f'<rect x="{CX}" y="{CY}" width="{W-CX+20}" height="{H-CY+20}" rx="12" fill="#060c19" stroke="{C["line2"]}"/>',
-        f'<text x="{CX+20}" y="{CY+36}" class="b" font-size="24" fill="#fff">{t(HERO["name"])}</text>',
-        icon("skull", W - 46, CY + 16, 24, C["gold"]),
-    ]
-    for i, (k, v) in enumerate(SHIP_CARD):
-        y = CY + 66 + i * 26
-        card.append(f'<text x="{CX+20}" y="{y}" class="m" font-size="11" fill="{C["violet"]}">{t(k)}</text>')
-        card.append(f'<text x="{CX+112}" y="{y}" class="m" font-size="11" fill="{C["muted"]}">:</text>')
-        card.append(f'<text x="{CX+124}" y="{y}" class="m" font-size="10.5" fill="{C["green"] if i == 0 else C["cyan"]}">{t(v)}</text>')
-    shipimg = ken_burns(image_uri("ship.jpg"), RW, H, RX + RW * .45, H * .55, 1.05, 30, x=RX, par="xMaxYMid slice", pan=(-6, 0))
+    QX = RX + RW / 2
+    D = 12.0                                   # one write → hold → fade loop
+    words, idx = [], 0
+    nlines = len(QUOTE["lines"])
+    line_h = 58
+    y0 = H / 2 - (nlines - 1) * line_h / 2 + 14
+    hold_end, gone = 10.4, 11.2
+    for li, line in enumerate(QUOTE["lines"]):
+        spans = []
+        for wi, w in enumerate(line):
+            gap = " " if wi < len(line) - 1 else ""   # no trailing space, so lines stay centred
+            t0 = 0.8 + idx * 0.42
+            k0, k1, k2 = t0 / D, (t0 + .35) / D, (t0 + 1.1) / D
+            final = C["gold2"] if w in QUOTE["gold"] else "#ffffff"
+            spans.append(
+                f'<tspan fill="{final}" fill-opacity="1">{t(w)}{gap}'
+                f'<animate attributeName="fill-opacity" values="0;0;1;1;0;0" '
+                f'keyTimes="0;{k0:.4f};{k1:.4f};{hold_end/D:.4f};{gone/D:.4f};1" dur="{D}s" repeatCount="indefinite"/>'
+                f'<animate attributeName="fill" values="{C["gold2"]};{C["gold2"]};{final};{final}" '
+                f'keyTimes="0;{k1:.4f};{k2:.4f};1" dur="{D}s" repeatCount="indefinite"/></tspan>'
+            )
+            idx += 1
+        words.append(f'<text x="{QX:.0f}" y="{y0 + li*line_h:.0f}" text-anchor="middle" class="b" font-size="46" '
+                     f'filter="url(#qglow)">{"".join(spans)}</text>')
+    t_done = 0.8 + idx * 0.42 + .2
+    kd, kd2 = t_done / D, (t_done + .9) / D
+    under_y = y0 + (nlines - 1) * line_h + 16
+    fade = f'keyTimes="0;{kd:.4f};{kd2:.4f};{hold_end/D:.4f};{gone/D:.4f};1" dur="{D}s" repeatCount="indefinite"'
+    shipimg = ken_burns(image_uri("ship.jpg"), RW, H, RX + RW * .3, H * .55, 1.06, 30, x=RX, par="xMinYMid slice", pan=(-8, 0))
     body = f"""
-<defs><clipPath id="ship"><rect x="{RX}" y="0" width="{RW}" height="{H}" rx="12"/></clipPath></defs>
+<defs>
+  <clipPath id="ship"><rect x="{RX}" y="0" width="{RW}" height="{H}" rx="12"/></clipPath>
+  <radialGradient id="shade" cx=".5" cy=".55" r=".75"><stop offset="0" stop-color="#030712" stop-opacity=".45"/>
+    <stop offset=".7" stop-color="#030712" stop-opacity=".72"/><stop offset="1" stop-color="#030712" stop-opacity=".9"/></radialGradient>
+  <filter id="qglow" x="-10%" y="-40%" width="120%" height="180%">
+    <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity=".85"/></filter>
+</defs>
 {panel(.5, .5, LW - 1, H - 1, 12, C['panel'], C['line'])}
 {''.join(rows)}
 {''.join(focus)}
 <g clip-path="url(#ship)">
   {shipimg}
-  {''.join(card)}
+  <rect x="{RX}" width="{RW}" height="{H}" fill="url(#shade)"/>
+  <text x="{RX+24}" y="34" class="m" font-size="12" fill="{C['cyan']}">&gt;_ captain's motto
+    <animate attributeName="opacity" values=".55;1;.55" dur="3s" repeatCount="indefinite"/></text>
+  {''.join(words)}
+  <line x1="{QX-150:.0f}" x2="{QX+150:.0f}" y1="{under_y:.0f}" y2="{under_y:.0f}" stroke="{C['gold']}" stroke-width="1.6"
+        stroke-linecap="round" stroke-dasharray="300" stroke-dashoffset="0" opacity=".8">
+    <animate attributeName="stroke-dashoffset" values="300;300;0;0;0;300" {fade}/></line>
+  <text x="{RX+RW-30}" y="{H-24}" text-anchor="end" class="b" font-size="22" fill="{C['gold']}" fill-opacity="1">{t(QUOTE['sign'])}
+    <animate attributeName="fill-opacity" values="0;0;1;1;0;0" {fade}/></text>
 </g>
 <rect x="{RX+.5}" y=".5" width="{RW-1}" height="{H-1}" rx="12" fill="none" stroke="{C['line2']}"/>"""
-    write("captains-log.svg", svg(W, H, body, fonts=("JBM", "JBMB", "Brush"), title=f"Captain's log — about {HERO['name']}"))
+    write("captains-log.svg", svg(W, H, body, fonts=("JBM", "JBMB", "Brush"), title=f"Captain's log — about {HERO['name']}. Motto: A small step each day builds a big dream."))
 
 
 # ------------------------------------------------------------------ MLOps pipeline strip

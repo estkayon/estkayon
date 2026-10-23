@@ -42,7 +42,7 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            snk/snake.svg?color_snake=#f4a63a&color_dots=#121c31,#0e4429,#006d32,#26a641,#39d353
+            snk/snake.svg?color_snake=#f4a63a&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
 
       - name: Put the snake on the dashboard panel
         run: python scripts/generate_voyage.py --frame-snake snk/snake.svg dist/snake.svg

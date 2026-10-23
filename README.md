@@ -26,34 +26,46 @@
 
 <img src="assets/divider.svg" width="100%" alt=""/>
 
-## 🧰 `03 / SKILL INVENTORY`
+<img src="assets/head-skill-inventory.svg" width="100%" alt="Skill Inventory — tools of the trade"/>
 
-<div align="center">
-
-**AI / MACHINE LEARNING**
-
-<img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,sklearn&theme=light" alt="Python, PyTorch, TensorFlow, scikit-learn"/>
-
-**MLOPS / SHIPPING SYSTEMS**
-
-<img src="https://skillicons.dev/icons?i=docker,githubactions,aws,linux,git&theme=light" alt="Docker, GitHub Actions, AWS, Linux, Git"/>
-
-**BACKEND / DATA**
-
-<img src="https://skillicons.dev/icons?i=fastapi,laravel,php,postgres,mysql,mongodb&theme=light" alt="FastAPI, Laravel, PHP, PostgreSQL, MySQL, MongoDB"/>
-
-**FRONTEND / PRODUCT**
-
-<img src="https://skillicons.dev/icons?i=react,ts,js,html,css,bootstrap&theme=light" alt="React, TypeScript, JavaScript, HTML, CSS, Bootstrap"/>
-
-</div>
-
-| 🧪 AI / Data | ⚙️ MLOps | 🧱 Software engineering |
-|---|---|---|
-| PyTorch, TensorFlow, scikit-learn | MLflow, DVC, DagsHub | FastAPI, Laravel, REST APIs |
-| pandas, NumPy, Matplotlib | Docker, CI/CD, GitHub Actions | React, JavaScript, TypeScript |
-| Computer vision, NLP | Model evaluation & tracking | PHP, C++, C#, R |
-| Time-series forecasting | Linux, AWS, reproducible workflows | PostgreSQL, MySQL, MongoDB |
+<table>
+<tr>
+<td width="24%" valign="middle"><b>🧠 AI / ML</b><br/><sub>models &amp; research</sub></td>
+<td valign="middle">
+<img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,sklearn&theme=dark" alt="Python, PyTorch, TensorFlow, scikit-learn"/><br/>
+<sub>pandas · NumPy · Matplotlib · computer vision · NLP · time-series forecasting</sub>
+</td>
+</tr>
+<tr>
+<td width="24%" valign="middle"><b>⚙️ MLOps</b><br/><sub>shipping systems</sub></td>
+<td valign="middle">
+<img src="https://skillicons.dev/icons?i=docker,githubactions,aws,linux,git&theme=dark" alt="Docker, GitHub Actions, AWS, Linux, Git"/><br/>
+<img src="https://img.shields.io/badge/MLflow-0B1427?style=flat-square&logo=mlflow&logoColor=F4A63A" alt="MLflow"/>
+<img src="https://img.shields.io/badge/DVC-0B1427?style=flat-square&logo=dvc&logoColor=F4A63A" alt="DVC"/>
+<img src="https://img.shields.io/badge/DagsHub-0B1427?style=flat-square" alt="DagsHub"/><br/>
+<sub>CI/CD · model evaluation &amp; tracking · reproducible workflows</sub>
+</td>
+</tr>
+<tr>
+<td width="24%" valign="middle"><b>🧱 Backend / Data</b><br/><sub>APIs &amp; databases</sub></td>
+<td valign="middle">
+<img src="https://skillicons.dev/icons?i=fastapi,laravel,php,postgres,mysql,mongodb&theme=dark" alt="FastAPI, Laravel, PHP, PostgreSQL, MySQL, MongoDB"/><br/>
+<sub>REST APIs · relational data</sub>
+</td>
+</tr>
+<tr>
+<td width="24%" valign="middle"><b>🎨 Frontend</b><br/><sub>product &amp; UI</sub></td>
+<td valign="middle">
+<img src="https://skillicons.dev/icons?i=react,ts,js,html,css,bootstrap&theme=dark" alt="React, TypeScript, JavaScript, HTML, CSS, Bootstrap"/>
+</td>
+</tr>
+<tr>
+<td width="24%" valign="middle"><b>💻 Also code in</b><br/><sub>languages</sub></td>
+<td valign="middle">
+<img src="https://skillicons.dev/icons?i=cpp,cs,r&theme=dark" alt="C++, C#, R"/>
+</td>
+</tr>
+</table>
 
 <img src="assets/divider.svg" width="100%" alt=""/>
 
