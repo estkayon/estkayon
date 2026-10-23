@@ -1,158 +1,189 @@
-<!--
-  STRAW HAT EDITION | GitHub Profile README
-  Palette: Straw Hat red #D62828 · gold #F4C542 · cream #FFF1C1 · ink #171717
--->
-
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=220&color=0:D62828,45:F4C542,100:FFF1C1&fontColor=171717&text=AYON%20%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F&fontSize=46&fontAlignY=38&desc=Building%20ML%20systems%20that%20make%20it%20to%20production&descAlignY=59&descSize=15&animation=fadeIn" alt="Straw Hat themed banner"/>
+<img src="./assets/straw-hat-crew-hero.gif" width="100%" alt="Animated Straw Hat crew cover, with Ayon's AI/ML and MLOps tagline"/>
 
-<a href="https://github.com/estkayon">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&duration=2800&pause=900&color=D62828&center=true&vCenter=true&width=700&lines=Md.+Estiak+Rahman+Ayon;AI%2FML+%7C+MLOps+Engineer;Forecasting+%7C+Model+Deployment+%7C+Automation;Dream+big.+Build+carefully.+Ship+reliably." alt="Typing intro"/>
-</a>
+<br/>
 
-<p>
-  <a href="https://estkayon.github.io/Portfolio/"><img src="https://img.shields.io/badge/Portfolio-FFF1C1?style=for-the-badge&logo=githubpages&logoColor=171717" alt="Portfolio"/></a>
-  <a href="https://www.linkedin.com/in/md-estiak-rahman-ayon/"><img src="https://img.shields.io/badge/LinkedIn-D62828?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="mailto:estiakayon@gmail.com"><img src="https://img.shields.io/badge/Email-F4C542?style=for-the-badge&logo=gmail&logoColor=171717" alt="Email"/></a>
-  <a href="https://github.com/estkayon"><img src="https://img.shields.io/badge/GitHub-171717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-</p>
+<a href="https://estkayon.github.io/Portfolio/"><img src="https://img.shields.io/badge/PORTFOLIO-171717?style=for-the-badge&logo=githubpages&logoColor=F4C542" alt="Portfolio"/></a>
+<a href="https://www.linkedin.com/in/md-estiak-rahman-ayon/"><img src="https://img.shields.io/badge/LINKEDIN-D62828?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="https://github.com/estkayon"><img src="https://img.shields.io/badge/GITHUB-F4C542?style=for-the-badge&logo=github&logoColor=171717" alt="GitHub"/></a>
+<a href="mailto:estiakayon@gmail.com"><img src="https://img.shields.io/badge/CONTACT-FFF1C1?style=for-the-badge&logo=gmail&logoColor=171717" alt="Email"/></a>
 
-<img src="https://komarev.com/ghpvc/?username=estkayon&label=PROFILE%20VISITS&color=D62828&style=flat-square" alt="Profile views"/>
-<img src="https://img.shields.io/github/followers/estkayon?label=CREW&style=flat-square&color=F4C542&labelColor=171717" alt="GitHub followers"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=19&duration=2600&pause=850&color=D62828&center=true&vCenter=true&width=820&lines=AI%2FML+Engineer+%7C+MLOps+Builder;Forecasting+%E2%80%A2+Deployment+%E2%80%A2+Automation;Researching+efficient+AI+for+low-resource+settings;Build+with+purpose.+Ship+with+care." alt="Animated role line"/>
+
+<img src="https://komarev.com/ghpvc/?username=estkayon&label=VISITORS%20TO%20MY%20PROFILE&color=D62828&style=flat-square" alt="Profile views"/>
 
 </div>
 
----
+<img src="./assets/straw-hat-divider.svg" width="100%" alt="Animated Straw Hat divider"/>
 
-## ☠️ The person behind the hat
+## 🧭 `01 / CAPTAIN'S LOG`
 
-I'm a Computer Science & Engineering graduate from **American International University-Bangladesh (AIUB)**, focused on **AI/ML engineering and MLOps**. I like turning experiments into reproducible pipelines, APIs, and deployed applications.
+> **Md. Estiak Rahman Ayon** · CSE Graduate · AI/ML & MLOps
 
-- 🧠 **Focus:** Machine learning, computer vision, NLP, forecasting, and MLOps
-- ⚙️ **Build style:** Data → experiment → versioned pipeline → API → deployment
-- 🔬 **Research:** Efficient AI for low-resource languages and low-resource computing environments
-- 🌏 **Based in:** Bangladesh
-- 🎯 **Career goal:** MLOps Engineer
-- 🏴‍☠️ **Straw Hat rule:** Build useful things, keep learning, and don't abandon the crew.
+I build practical machine-learning systems, from data preparation and experiments to APIs, dashboards, reproducible pipelines, and deployment. My current focus is making ML systems measurable, maintainable, and useful beyond a notebook.
 
----
+- 🧪 **Research lane:** computer vision, NLP, time-series forecasting, low-resource AI
+- ⚙️ **Engineering lane:** FastAPI, Docker, MLflow, DVC, DagsHub, CI/CD
+- 🎯 **North Star:** MLOps Engineer
+- 🌏 **Home port:** Bangladesh
+- 🏴‍☠️ **Crew code:** stay curious, build for real users, and keep the pipeline reproducible
 
-## 🚀 Main quests
+<img src="./assets/straw-hat-divider.svg" width="100%" alt="Animated divider"/>
+
+## ⚡ `02 / FLAGSHIP MISSIONS`
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
+<a href="https://github.com/estkayon/Bangladesh-Electricity-Demand-Forecasting-MLOps"><img src="https://img.shields.io/badge/MISSION_01-ELECTRICITY_FORECASTING-D62828?style=for-the-badge&logo=databricks&logoColor=white" alt="Electricity forecasting project"/></a>
+
 ### ⚡ Bangladesh Electricity Demand Forecasting
-**Time-series forecasting + MLOps**
 
-Forecasts electricity demand using BPDB demand data and weather features. Includes model evaluation, experiment tracking, data versioning, API serving, dashboard, and automated workflows.
+**Forecasting with an MLOps delivery pipeline**
 
-- **Holdout MAPE:** 5.68%
-- **Mean CV MAPE:** 4.89%
-- **Stack:** Python, scikit-learn, MLflow, DVC, DagsHub, FastAPI, Streamlit, Docker, GitHub Actions
+A time-series forecasting project using Bangladesh electricity demand data, designed around experiment tracking, data versioning, API serving, and an interactive dashboard.
 
-[**Repository →**](https://github.com/estkayon/Bangladesh-Electricity-Demand-Forecasting-MLOps)
+- 🎯 **Holdout MAPE:** `5.68%`
+- 📉 **Mean CV MAPE:** `4.89%`
+- 🧱 **Pipeline:** DVC → training & evaluation → MLflow/DagsHub → FastAPI → Streamlit
+- 🚢 **Delivery:** Docker, GitHub Actions, Render deployment workflow
+
+[Explore repository ↗](https://github.com/estkayon/Bangladesh-Electricity-Demand-Forecasting-MLOps)
 
 </td>
 <td width="50%" valign="top">
 
+<a href="https://github.com/estkayon/Ecommerce-Management-System"><img src="https://img.shields.io/badge/MISSION_02-ECOMMERCE_SYSTEM-F4C542?style=for-the-badge&logo=laravel&logoColor=171717" alt="Ecommerce project"/></a>
+
 ### 🛒 E-commerce Management System
-**Backend engineering + database design**
 
-A full-stack management system focused on structured backend development, business workflows, database design, and API development.
+**Backend structure for real business workflows**
 
-- **Stack:** Laravel, PHP, PostgreSQL, Sanctum, REST API
-- **Focus:** MVC, authentication, data integrity, maintainable backend structure
+A Laravel-based management system built with an MVC approach, relational data modeling, authentication, and API-focused backend development.
 
-[**Repository →**](https://github.com/estkayon/Ecommerce-Management-System)
+- 🧩 **Architecture:** Laravel MVC
+- 🗄️ **Database:** PostgreSQL
+- 🔐 **Auth:** Laravel Sanctum
+- 🛠️ **Focus:** maintainable code, validation, data integrity, REST APIs
+
+[Explore repository ↗](https://github.com/estkayon/Ecommerce-Management-System)
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
+<a href="https://github.com/estkayon/BanglaCXR-Vision-Language-Report-Generation"><img src="https://img.shields.io/badge/MISSION_03-BANGLACXR-171717?style=for-the-badge&logo=pytorch&logoColor=F4C542" alt="BanglaCXR project"/></a>
+
+### 🩻 BanglaCXR
+
+**Bangla chest X-ray report generation**
+
+My undergraduate thesis: a two-stage vision-language pipeline designed to generate Bangla radiology reports with attention to low-resource language settings.
+
+- 🧠 RAD-DINO + anatomy-guided projector + Phi-3.5 Mini
+- 🌐 NLLB-200 based Bangla report translation
+- 🧪 QLoRA, computer vision, vision-language modeling
+
+[Explore repository ↗](https://github.com/estkayon/BanglaCXR-Vision-Language-Report-Generation)
+
+</td>
+<td width="50%" valign="top">
+
+<a href="https://github.com/estkayon/MLOps-Project---Vehicle-Insurance-Domain"><img src="https://img.shields.io/badge/MISSION_04-VEHICLE_INSURANCE-FFF1C1?style=for-the-badge&logo=fastapi&logoColor=171717" alt="Vehicle insurance MLOps project"/></a>
 
 ### 🧰 Vehicle Insurance MLOps
-**End-to-end ML pipeline**
 
-A modular ML workflow covering data ingestion, model training, experiment tracking, and deployment-oriented engineering.
+**Modular end-to-end machine learning**
 
-- **Stack:** Python, MLflow, FastAPI, DVC, Docker
+A structured ML project covering ingestion, training, evaluation, and deployment-oriented engineering.
 
-[**Repository →**](https://github.com/estkayon/MLOps-Project---Vehicle-Insurance-Domain)
+- 🐍 Python
+- 🚀 FastAPI
+- 📦 DVC / MLflow
+- 🐳 Docker
+
+[Explore repository ↗](https://github.com/estkayon/MLOps-Project---Vehicle-Insurance-Domain)
 
 </td>
 </tr>
 </table>
 
----
+<img src="./assets/straw-hat-divider.svg" width="100%" alt="Animated divider"/>
 
-## 🧭 Skills in my inventory
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-D62828?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/PyTorch-171717?style=for-the-badge&logo=pytorch&logoColor=F4C542" alt="PyTorch"/>
-  <img src="https://img.shields.io/badge/scikit--learn-F4C542?style=for-the-badge&logo=scikitlearn&logoColor=171717" alt="scikit-learn"/>
-  <img src="https://img.shields.io/badge/FastAPI-FFF1C1?style=for-the-badge&logo=fastapi&logoColor=171717" alt="FastAPI"/>
-  <img src="https://img.shields.io/badge/Docker-D62828?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
-  <img src="https://img.shields.io/badge/MLflow-171717?style=for-the-badge&logo=mlflow&logoColor=F4C542" alt="MLflow"/>
-  <img src="https://img.shields.io/badge/DVC-F4C542?style=for-the-badge&logo=dvc&logoColor=171717" alt="DVC"/>
-  <img src="https://img.shields.io/badge/GitHub_Actions-FFF1C1?style=for-the-badge&logo=githubactions&logoColor=171717" alt="GitHub Actions"/>
-  <img src="https://img.shields.io/badge/DagsHub-D62828?style=for-the-badge&logo=git&logoColor=white" alt="DagsHub"/>
-  <img src="https://img.shields.io/badge/Streamlit-171717?style=for-the-badge&logo=streamlit&logoColor=F4C542" alt="Streamlit"/>
-  <img src="https://img.shields.io/badge/Laravel-D62828?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-FFF1C1?style=for-the-badge&logo=postgresql&logoColor=171717" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/React-171717?style=for-the-badge&logo=react&logoColor=F4C542" alt="React"/>
-  <img src="https://img.shields.io/badge/TypeScript-D62828?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/AWS-F4C542?style=for-the-badge&logo=amazonaws&logoColor=171717" alt="AWS"/>
-</p>
-
-| Area | Tools and technologies |
-|---|---|
-| **AI / ML** | PyTorch, TensorFlow, scikit-learn, pandas, NumPy, computer vision, NLP, model evaluation |
-| **MLOps** | MLflow, DVC, DagsHub, Docker, GitHub Actions, CI/CD, FastAPI, model packaging |
-| **Backend** | Python, FastAPI, Laravel, PHP, REST APIs, Node.js |
-| **Frontend** | React, JavaScript, TypeScript, HTML, CSS, Tailwind CSS, Bootstrap |
-| **Data & databases** | SQL, PostgreSQL, MySQL, MongoDB, data preprocessing, time-series forecasting |
-| **Cloud & tools** | AWS, Linux, Git, GitHub, GitLab, Streamlit |
-| **Other languages** | C++, C#, JavaScript, PHP, R |
-
----
-
-## 📈 The voyage so far
+## 🧰 `03 / SKILL INVENTORY`
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=estkayon&show_icons=true&hide_border=true&bg_color=FFF8E7&title_color=D62828&icon_color=D62828&text_color=171717&ring_color=F4C542&include_all_commits=true" alt="GitHub statistics"/>
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=estkayon&layout=compact&hide_border=true&bg_color=FFF8E7&title_color=D62828&text_color=171717&langs_count=8" alt="Most used languages"/>
+**AI / MACHINE LEARNING**
 
-<img width="70%" src="https://streak-stats.demolab.com?user=estkayon&hide_border=true&background=FFF8E7&ring=D62828&fire=D62828&currStreakLabel=D62828&sideLabels=171717&currStreakNum=171717&sideNums=171717&dates=6B6255" alt="GitHub contribution streak"/>
+<img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,sklearn&theme=light" alt="Python, PyTorch, TensorFlow, scikit-learn"/>
+
+**MLOPS / SHIPPING SYSTEMS**
+
+<img src="https://skillicons.dev/icons?i=docker,githubactions,aws,linux,git&theme=light" alt="Docker, GitHub Actions, AWS, Linux, Git"/>
+
+**BACKEND / DATA**
+
+<img src="https://skillicons.dev/icons?i=fastapi,laravel,php,postgres,mysql,mongodb&theme=light" alt="FastAPI, Laravel, PHP, PostgreSQL, MySQL, MongoDB"/>
+
+**FRONTEND / PRODUCT**
+
+<img src="https://skillicons.dev/icons?i=react,ts,js,html,css,bootstrap&theme=light" alt="React, TypeScript, JavaScript, HTML, CSS, Bootstrap"/>
 
 </div>
 
-### 🐍 Contributions, Straw Hat style
+| 🧪 AI / Data | ⚙️ MLOps | 🧱 Software engineering |
+|---|---|---|
+| PyTorch, TensorFlow, scikit-learn | MLflow, DVC, DagsHub | FastAPI, Laravel, REST APIs |
+| pandas, NumPy, Matplotlib | Docker, CI/CD, GitHub Actions | React, JavaScript, TypeScript |
+| Computer vision, NLP | Model evaluation & tracking | PHP, C++, C#, R |
+| Time-series forecasting | Linux, AWS, reproducible workflows | PostgreSQL, MySQL, MongoDB |
+
+<img src="./assets/straw-hat-divider.svg" width="100%" alt="Animated divider"/>
+
+## 📊 `04 / VOYAGE LOG`
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/estkayon/estkayon/output/snake.svg" alt="Contribution graph snake animation"/>
+<a href="https://github.com/estkayon">
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=estkayon&show_icons=true&hide_border=true&bg_color=FFF8E7&title_color=D62828&icon_color=D62828&text_color=171717&ring_color=F4C542&include_all_commits=true" alt="GitHub stats"/>
+</a>
+<a href="https://github.com/estkayon">
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=estkayon&layout=compact&hide_border=true&bg_color=FFF8E7&title_color=D62828&text_color=171717&langs_count=8" alt="Top languages"/>
+</a>
+<br/>
+<img width="70%" src="https://streak-stats.demolab.com?user=estkayon&hide_border=true&background=FFF8E7&ring=D62828&fire=D62828&currStreakLabel=D62828&sideLabels=171717&currStreakNum=171717&sideNums=171717&dates=6B6255" alt="Contribution streak"/>
 </div>
 
----
+### 🐍 The contribution trail
 
-## 🤝 Find me
+<div align="center">
+<img src="https://raw.githubusercontent.com/estkayon/estkayon/output/snake.svg" alt="Animated contribution snake"/>
+</div>
 
-- 🌐 Portfolio: [estkayon.github.io/Portfolio](https://estkayon.github.io/Portfolio/)
-- 💼 LinkedIn: [md-estiak-rahman-ayon](https://www.linkedin.com/in/md-estiak-rahman-ayon/)
-- 📧 Email: [estiakayon@gmail.com](mailto:estiakayon@gmail.com)
-- 💻 GitHub: [@estkayon](https://github.com/estkayon)
+<img src="./assets/straw-hat-divider.svg" width="100%" alt="Animated divider"/>
+
+## 🧪 `05 / CURRENTLY EXPLORING`
+
+- 🔁 Making ML workflows more reproducible and easier to deploy
+- 📦 Improving model serving and pipeline automation
+- 🌏 Efficient AI for low-resource languages and limited compute
+- 📈 Forecasting systems with measurable real-world performance
+
+## 📡 `06 / OPEN CHANNEL`
 
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=130&section=footer&color=0:FFF1C1,55:F4C542,100:D62828"/>
+<a href="https://estkayon.github.io/Portfolio/"><img src="https://img.shields.io/badge/Explore_my_work-171717?style=for-the-badge&logo=githubpages&logoColor=F4C542" alt="Portfolio"/></a>
+<a href="https://www.linkedin.com/in/md-estiak-rahman-ayon/"><img src="https://img.shields.io/badge/Connect_on_LinkedIn-D62828?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="mailto:estiakayon@gmail.com"><img src="https://img.shields.io/badge/Send_an_email-F4C542?style=for-the-badge&logo=gmail&logoColor=171717" alt="Email"/></a>
 
-**“A model isn't finished when it trains. It's finished when people can use it.”**
+<br/><br/>
 
-<sub>Thanks for stopping by. Keep your dream alive and your pipelines reproducible. ☠️</sub>
+**“The model is the start. The system is the mission.”**
+
+<sub>Built with curiosity, shipped with care. ☠️</sub>
 
 </div>
