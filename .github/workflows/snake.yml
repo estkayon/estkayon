@@ -1,27 +1,54 @@
-name: Generate contribution snake
+name: Voyage Log + contribution snake
+
+# Builds the live stat cards (scripts/generate_voyage.py) and the contribution
+# snake, then publishes both to the `output` branch that README.md reads from.
+# Both live in ONE workflow on purpose: publishing to `output` replaces the
+# whole branch, so two separate workflows would wipe each other's files.
 
 on:
   schedule:
-    - cron: "17 0 * * *"
+    - cron: "17 0,12 * * *"   # 06:17 and 18:17 Dhaka time
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "assets/img/**"
+      - "assets/fonts/**"
+      - ".github/workflows/snake.yml"
 
 permissions:
   contents: write
 
 jobs:
-  generate:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate snake animation
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate Voyage Log cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optional: add a classic PAT (read:user) as GH_STATS_TOKEN to count private contributions
+          GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
+        run: python scripts/generate_voyage.py --user ${{ github.repository_owner }} --out dist
+
+      - name: Generate contribution snake
         uses: Platane/snk@v3
         with:
-          github_user_name: estkayon
+          github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake.svg
-            dist/snake-dark.svg?palette=github-dark
-      - name: Publish animation
+            dist/snake.svg?color_snake=#f4a63a
+            dist/snake-dark.svg?palette=github-dark&color_snake=#f4a63a
+
+      - name: Publish to output branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: output
           publish_dir: dist
+          commit_message: "chore: refresh voyage log"
