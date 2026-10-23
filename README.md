@@ -10,7 +10,7 @@
 <a href="https://estkayon.github.io/Portfolio/"><img src="https://img.shields.io/badge/PORTFOLIO-0B1427?style=for-the-badge&logo=githubpages&logoColor=F4A63A" alt="Portfolio"/></a>
 <a href="https://www.linkedin.com/in/md-estiak-rahman-ayon/"><img src="https://img.shields.io/badge/LINKEDIN-0B1427?style=for-the-badge&logo=linkedin&logoColor=7CC8FF" alt="LinkedIn"/></a>
 <a href="mailto:estiakayon@gmail.com"><img src="https://img.shields.io/badge/EMAIL-0B1427?style=for-the-badge&logo=gmail&logoColor=FFFFFF" alt="Email"/></a>
-<img src="https://komarev.com/ghpvc/?username=estkayon&color=F4A63A&style=for-the-badge&label=CREW%20ABOARD" alt="Visitors"/>
+<!-- <img src="https://komarev.com/ghpvc/?username=estkayon&color=F4A63A&style=for-the-badge&label=CREW%20ABOARD" alt="Visitors"/> -->
 
 </div>
 
@@ -85,17 +85,19 @@ Time-series forecasting with a full MLOps delivery pipeline: versioned data, tra
 ![MLflow](https://img.shields.io/badge/MLflow-0B1427?style=flat-square&logo=mlflow&logoColor=F4A63A)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0B1427?style=flat-square&logo=fastapi&logoColor=F4A63A)
 ![Streamlit](https://img.shields.io/badge/Streamlit-0B1427?style=flat-square&logo=streamlit&logoColor=F4A63A)
-![Docker](https://img.shields.io/badge/Docker-0B1427?style=flat-square&logo=docker&logoColor=F4A63A)
+![Docker](assets/badge-docker.svg)
 
 </td>
 <td width="50%" valign="top">
 
 #### 🛒 [E-commerce Management System](https://github.com/estkayon/Ecommerce-Management-System)
-Laravel MVC backend for real business workflows: relational data modeling, Sanctum auth, validation and REST APIs.
+Full-stack system for real business workflows: a Laravel MVC REST API (PostgreSQL, Sanctum auth, validation) powering a typed Next.js + TypeScript front-end.
 
 ![Laravel](https://img.shields.io/badge/Laravel-0B1427?style=flat-square&logo=laravel&logoColor=F4A63A)
 ![PHP](https://img.shields.io/badge/PHP-0B1427?style=flat-square&logo=php&logoColor=F4A63A)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0B1427?style=flat-square&logo=postgresql&logoColor=F4A63A)
+![TypeScript](https://img.shields.io/badge/TypeScript-0B1427?style=flat-square&logo=typescript&logoColor=F4A63A)
+![Next.js](https://img.shields.io/badge/Next.js-0B1427?style=flat-square&logo=nextdotjs&logoColor=F4A63A)
 
 </td>
 </tr>
