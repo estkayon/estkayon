@@ -10,7 +10,7 @@
 <a href="https://estkayon.github.io/Portfolio/"><img src="https://img.shields.io/badge/PORTFOLIO-0B1427?style=for-the-badge&logo=githubpages&logoColor=F4A63A" alt="Portfolio"/></a>
 <a href="https://www.linkedin.com/in/md-estiak-rahman-ayon/"><img src="https://img.shields.io/badge/LINKEDIN-0B1427?style=for-the-badge&logo=linkedin&logoColor=7CC8FF" alt="LinkedIn"/></a>
 <a href="mailto:estiakayon@gmail.com"><img src="https://img.shields.io/badge/EMAIL-0B1427?style=for-the-badge&logo=gmail&logoColor=FFFFFF" alt="Email"/></a>
-<!-- <img src="https://komarev.com/ghpvc/?username=estkayon&color=F4A63A&style=for-the-badge&label=CREW%20ABOARD" alt="Visitors"/> -->
+<img src="https://visitor-badge.laobi.icu/badge?page_id=estkayon.estkayon&left_color=%230B1427&right_color=%23F4A63A&left_text=CREW%20ABOARD" alt="Visitors"/>
 
 </div>
 
