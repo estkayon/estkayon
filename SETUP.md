@@ -1,19 +1,22 @@
-# Straw Hat Profile v2
+# Straw Hat Premium Profile Package
 
 ## Included
-- Animated crew cover with `𝙰𝚢𝚘𝚗`, exact role heading and tagline.
-- Two-column Captain's Log: YAML profile and looping Thousand Sunny sunset.
-- Voyage Log with monthly contributions, repository language shares, night commit city, and best-day spotlight.
-- Snake animation retained with the same output-branch approach.
-- Static Straw Hat crew footer and requested Luffy quote.
-- `CURRENTLY EXPLORING` removed.
+- `README.md`: redesigned, project-first Straw Hat themed profile
+- `assets/straw-hat-crew-hero.gif`: original generated crew cover with subtle looping camera movement and profile title
+- `assets/straw-hat-crew-cover.png`: high-resolution static source image
+- `assets/straw-hat-divider.svg`: local animated red/gold divider
+- `.github/workflows/snake.yml`: daily contribution-snake generator
 
-## Install
-1. Extract the ZIP.
-2. Copy `README.md`, `assets/`, `.github/workflows/refresh-voyage.yml`, and `scripts/generate_voyage.py` into your cloned profile repository.
-3. Commit and push to `main`.
-4. GitHub Settings → Actions → General: enable workflows and allow read/write contents.
-5. Run Actions → Refresh Straw Hat Voyage Analytics → Run workflow once; it will also run daily.
-6. Review the first Actions run.
+## Install into the profile repository
+1. Back up your current README first.
+2. Copy the contents of this package into your cloned repository folder (`D:\GitHub\estkayon-backup`), preserving the `.github` and `assets` folders.
+3. Commit and push the updated README and assets.
+4. Run **Actions → Generate contribution snake → Run workflow** once. Ensure Actions are enabled and the workflow has permission to write repository contents.
+5. Check the profile on GitHub desktop and mobile.
 
-Contribution counts and language shares are generated from GitHub API data, not hardcoded numbers. Language percentages represent public repository language bytes, not skill ratings. Commit-city building heights and lights reflect contributing days and daily counts. The Gear 5-inspired silhouette is a stylized SVG figure.
+## Accuracy notes
+- The GIF is a subtle animated camera drift of the generated crew cover, not character-by-character animation.
+- GitHub's README renderer does not run custom JavaScript or page CSS; local GIF and SVG image assets are used for supported animation.
+- Electricity forecast metrics use the previously supplied values (5.68% holdout MAPE and 4.89% mean CV MAPE).
+- Check the E-commerce repository URL and listed stack against the current repo before publishing.
+- GitHub stats and skill icons are external image services, so they may occasionally be unavailable or rate-limited.
