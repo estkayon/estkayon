@@ -1,76 +1,73 @@
-# Straw Hat Dashboard — profile README package
+# Straw Hat Dashboard — profile README for estkayon
 
-A dark navy + gold profile README built from your dashboard design. The
-**Skill Inventory** section is copied byte-for-byte from your previous README;
-everything else is redesigned.
+Your profile, laid out like the `ahasan-ullah` README template (cover → about card →
+skills → project table → live stat cards → snake → footer) and styled after your
+Straw Hat dashboard design. The round Luffy avatar is removed from the cover, and the
+**Skill Inventory** section is kept exactly as it was in your previous README.
 
 ## What's inside
 
 | Path | What it is |
 |---|---|
 | `README.md` | The profile page |
-| `assets/hero.svg` | Top banner (your design's header, with a light sweep, twinkling stars and a blinking cursor) |
-| `assets/head-*.svg` | Section headers (Captain's Log, Bounty Board, Voyage Log) with a turning helm/compass |
-| `assets/captains-log.svg` | About-me terminal card + sunset ship panel |
-| `assets/footer.svg` | Open Channel banner with your real contact handles |
+| `assets/hero.svg` | Animated cover (see below) |
+| `assets/captains-log.svg` | About-me terminal card + slowly zooming sunset-ship panel |
+| `assets/pipeline.svg` | Animated Mission 01 MLOps pipeline (DVC → Train → MLflow → FastAPI → Streamlit → Docker) |
+| `assets/head-*.svg` | Section headers with a turning helm / ship / compass |
+| `assets/footer.svg` | Open Channel banner with your handles, slow zoom + light sweep |
 | `assets/divider.svg` | Animated gold divider |
-| `assets/img/*.jpg` | Image crops from your design, embedded into the SVGs |
-| `assets/fonts/` | Cinzel and JetBrains Mono (SIL Open Font License, licences included) |
-| `scripts/build_static.py` | Rebuilds the static SVGs above — edit your details at the top, then run it |
-| `scripts/generate_voyage.py` | Builds the **live** Voyage Log cards from your real GitHub data |
-| `.github/workflows/snake.yml` | Runs twice a day: Voyage Log cards + contribution snake → `output` branch |
+| `assets/img/` | Art cropped from your design, with baked-in text and the avatar removed |
+| `assets/fonts/` | Cinzel, JetBrains Mono, Kaushan Script (SIL Open Font License, licences included) |
+| `scripts/build_static.py` | Rebuilds every SVG in `assets/` — your details are at the top |
+| `scripts/generate_voyage.py` | Builds the live Voyage Log cards and frames the snake |
+| `scripts/prepare_images.py` | One-time image prep from the design image (needs `opencv-python`) |
+| `.github/workflows/snake.yml` | Every 6 h: Voyage Log cards + contribution snake → `output` branch |
+
+## Animations
+
+- **Cover:** the art zooms and drifts very slowly (26 s, eased) behind still, crisp text; sunset glow
+  breathes, light rays turn, the sea glints, stars twinkle, seagulls glide, embers drift up.
+  "Ayon" draws itself in, a little straw hat drops onto it and rocks, the roles fade in, and four
+  taglines type out on a loop. "Dream · Build · Ship · Repeat" glows word by word.
+- **Captain's Log:** rows fade in one by one, blinking cursor, ship panel slowly zooms.
+- **Pipeline:** each stage lights up in turn and a data packet travels down the pipeline.
+- **Voyage Log:** heatmap fills week by week, language bars and monthly bars grow, stars twinkle over the city.
+- **Snake:** the contribution snake eats your graph, on a matching dark panel.
+- **Headers / divider / footer:** turning helm and compass, travelling gold spark, footer zoom + light sweep.
+
+Without SVG animation support (some previews), every image still shows its finished state.
 
 ## Install
 
-1. Copy everything in this zip into your `estkayon/estkayon` repository, keeping the folders.
-   `snake.yml` replaces your old workflow of the same name — keep only this one, because
-   two workflows publishing to `output` would erase each other's files.
-2. Optional cleanup: the old `assets/straw-hat-crew-hero.gif`, `straw-hat-crew-cover.png` and
-   `straw-hat-divider.svg` are no longer used and can be deleted.
-3. Commit and push. The push itself triggers the workflow (it also has *Run workflow* under
-   **Actions → Voyage Log + contribution snake**).
-4. Make sure **Settings → Actions → General → Workflow permissions** is set to
-   *Read and write permissions*.
-5. Once the run finishes, the Voyage Log and snake images appear. Before the first run they show as broken images — that's expected.
+1. Copy everything from this zip into your `estkayon/estkayon` repository, keeping the folders.
+   `.github/workflows/snake.yml` replaces your current workflow of the same name — keep only
+   this one, since two workflows publishing to `output` would erase each other's files.
+2. Optional cleanup — no longer used: `assets/straw-hat-crew-hero.gif`,
+   `assets/straw-hat-crew-cover.png`, `assets/straw-hat-divider.svg`.
+3. **Settings → Actions → General → Workflow permissions** → *Read and write permissions*.
+4. Commit and push. The push runs the workflow (or **Actions → Build profile graphics → Run workflow**).
+5. After the run the `output` branch holds `voyage-log.svg`, `voyage-bestday.svg` and `snake.svg`.
+   Until then those three images show as broken — that's expected.
 
-## Live stats — how they work
+For private contributions, add a classic PAT (`read:user`, `repo`) as the secret `GH_STATS_TOKEN`.
 
-`generate_voyage.py` reads your contribution calendar and the languages of your
-own (non-fork) repositories, then draws:
+## Editing
 
-- **My Contributions** — total, active days, best and current streak, heatmap for the last 8 months
-- **Tech Stack Usage** — share of code by language (top 8 + Others)
-- **Monthly Contributions** — bar chart for the same 8 months
-- **Best Day** — your busiest day in that window, on the night-city banner
-
-By default it counts **public** activity. To include private contributions, create a
-classic personal access token with the `read:user` and `repo` scopes and save it as a
-repository secret named `GH_STATS_TOKEN`.
-
-Jupyter Notebook, HTML, CSS and a few build files are left out of the language chart
-because their size would swamp the real code. To change that list, add an
-`EXCLUDE_LANGS` env value in the workflow (comma-separated, e.g. `Jupyter Notebook,HTML`).
-
-## Editing your details
-
-Open `scripts/build_static.py`, change `PROFILE`, `FOCUS` or `CONTACT`, then run:
+Change `HERO`, `PROFILE`, `FOCUS`, `SHIP_CARD`, `CONTACT` or `PIPELINE` at the top of
+`scripts/build_static.py`, then:
 
 ```bash
 cd scripts
 python build_static.py
 ```
 
-Preview the live cards locally with sample data (no network):
+Preview the live cards with sample data: `python scripts/generate_voyage.py --demo --out dist`.
 
-```bash
-python scripts/generate_voyage.py --demo --out dist
-```
+Jupyter Notebook, HTML, CSS and a few build files are left out of the language chart.
+Set an `EXCLUDE_LANGS` env value in the workflow to change that (comma-separated).
 
-## Notes
+## Note
 
-- The images inside the banners are cropped from the design image you supplied.
-- The email used everywhere is `estiakayon@gmail.com` (from your previous README). Your
-  design image showed `estkayon@gmail.com` — if that's the right one, update `CONTACT` in
-  `build_static.py` and the two `mailto:` links in `README.md`.
-- GitHub shows README images through `<img>`, which can't run scripts, so all animation is
-  SVG/SMIL, and fonts and images are embedded inside each SVG.
+The email used is `estiakayon@gmail.com` (from your previous README). Your design image shows
+`estkayon@gmail.com` — if that's the right one, change it in `CONTACT` and in the two
+`mailto:` links in `README.md`.

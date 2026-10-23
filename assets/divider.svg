@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="34" viewBox="0 0 1000 34" role="img" aria-label="divider"><title>divider</title><style>.m{font-family:'JBM','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace}.mb{font-family:'JBMB','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace;font-weight:700}.s{font-family:'Cinzel',Georgia,'Times New Roman',serif;font-weight:700}</style>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="34" viewBox="0 0 1000 34" role="img" aria-label="divider"><title>divider</title><style>.m{font-family:'JBM','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace}.mb{font-family:'JBMB','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace;font-weight:700}.s{font-family:'Cinzel',Georgia,'Times New Roman',serif;font-weight:700}.b{font-family:'Brush','Segoe Script','Brush Script MT',cursive}</style>
 <defs><linearGradient id="g"><stop offset="0" stop-color="#f4a63a" stop-opacity="0"/>
 <stop offset=".5" stop-color="#f4a63a"/><stop offset="1" stop-color="#f4a63a" stop-opacity="0"/></linearGradient></defs>
 <rect x="0" y="16" width="1000" height="1.6" fill="url(#g)"/>
-<circle cy="16.8" r="3" fill="#ffcf6e"><animate attributeName="cx" values="60;940;60" dur="9s" repeatCount="indefinite"/>
+<circle cx="500" cy="16.8" r="3" fill="#ffcf6e"><animate attributeName="cx" values="60;940;60" dur="9s" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" repeatCount="indefinite"/>
 <animate attributeName="opacity" values=".2;1;.2" dur="9s" repeatCount="indefinite"/></circle>
 <g transform="translate(500 17)">
   <circle r="13" fill="#070d1a" stroke="#f4a63a" stroke-width="1.4"/>

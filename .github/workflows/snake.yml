@@ -1,24 +1,24 @@
-name: Voyage Log + contribution snake
+name: Build profile graphics
 
-# Builds the live stat cards (scripts/generate_voyage.py) and the contribution
-# snake, then publishes both to the `output` branch that README.md reads from.
-# Both live in ONE workflow on purpose: publishing to `output` replaces the
-# whole branch, so two separate workflows would wipe each other's files.
+# Builds the live Voyage Log cards and the framed contribution snake, then
+# publishes them to the "output" branch that README.md reads from.
+# Everything is in ONE workflow on purpose: publishing replaces the whole
+# branch, so a second workflow would wipe these files. (This file keeps the
+# old name, snake.yml, so copying it in replaces the previous snake workflow.)
 
 on:
   schedule:
-    - cron: "17 0,12 * * *"   # 06:17 and 18:17 Dhaka time
-  workflow_dispatch:
+    - cron: "17 */6 * * *"   # every 6 hours
   push:
     branches: [main]
-    paths:
-      - "scripts/**"
-      - "assets/img/**"
-      - "assets/fonts/**"
-      - ".github/workflows/snake.yml"
+  workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: profile-graphics
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -30,25 +30,27 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Generate Voyage Log cards
+      - name: Voyage Log cards (contributions, tech stack, monthly, best day)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Optional: add a classic PAT (read:user) as GH_STATS_TOKEN to count private contributions
+          # Optional: a classic PAT (read:user) saved as GH_STATS_TOKEN adds private contributions.
           GH_STATS_TOKEN: ${{ secrets.GH_STATS_TOKEN }}
         run: python scripts/generate_voyage.py --user ${{ github.repository_owner }} --out dist
 
-      - name: Generate contribution snake
+      - name: Contribution snake
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake.svg?color_snake=#f4a63a
-            dist/snake-dark.svg?palette=github-dark&color_snake=#f4a63a
+            snk/snake.svg?color_snake=#f4a63a&color_dots=#121c31,#0e4429,#006d32,#26a641,#39d353
 
-      - name: Publish to output branch
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Put the snake on the dashboard panel
+        run: python scripts/generate_voyage.py --frame-snake snk/snake.svg dist/snake.svg
+
+      - name: Publish to "output" branch
+        uses: crazy-max/ghaction-github-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: output
-          publish_dir: dist
-          commit_message: "chore: refresh voyage log"
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

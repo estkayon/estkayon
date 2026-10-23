@@ -35,11 +35,13 @@ FONT_FILES = {
     "Cinzel": ("cinzel-latin-700-normal.woff2", 700),
     "JBM": ("jetbrains-mono-latin-400-normal.woff2", 400),
     "JBMB": ("jetbrains-mono-latin-700-normal.woff2", 700),
+    "Brush": ("kaushan-script-latin-400-normal.woff2", 400),
 }
 
 MONO = "'JBM','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace"
 MONOB = "'JBMB','JetBrains Mono',Consolas,'DejaVu Sans Mono',monospace"
 SERIF = "'Cinzel',Georgia,'Times New Roman',serif"
+BRUSH = "'Brush','Segoe Script','Brush Script MT',cursive"
 
 
 def b64(path: Path) -> str:
@@ -74,7 +76,7 @@ def svg(w: int, h: int, body: str, fonts=("JBM",), extra_css: str = "", title: s
         f"<title>{t(title)}</title>"
         f"<style>{font_css(*fonts)}"
         f".m{{font-family:{MONO}}}.mb{{font-family:{MONOB};font-weight:700}}"
-        f".s{{font-family:{SERIF};font-weight:700}}"
+        f".s{{font-family:{SERIF};font-weight:700}}.b{{font-family:{BRUSH}}}"
         f"{extra_css}</style>{body}</svg>"
     )
 
@@ -105,6 +107,9 @@ def icon(name: str, x: float, y: float, size: float = 18, color: str = C["gold"]
         "ship": '<path d="M3 16h18l-2.5 4.5h-13z"/><path d="M12 3v13M12 4l6 9h-6M12 6l-5 7h5"/>',
         "skull": '<path d="M12 3a7 7 0 0 0-7 7c0 2.3 1.1 3.8 2.5 4.8V18h9v-3.2C17.9 13.8 19 12.3 19 10a7 7 0 0 0-7-7z"/><circle cx="9.3" cy="10.5" r="1.4"/><circle cx="14.7" cy="10.5" r="1.4"/><path d="M10 18v2.5M14 18v2.5M12 18v2.5"/>',
         "mail": '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/>',
+        "snake": '<path d="M3 17c2.5 0 3.2-1.6 3.6-3.4C7.1 11.4 8 9.5 10.5 9.5s3.4 1.9 3.9 4.1c.4 1.8 1.1 3.4 3.6 3.4 2 0 3-1.3 3-3"/><path d="M14.8 6.5c0-1.6 1.3-2.5 2.7-2.5s2.7.9 2.7 2.5-1.3 2.5-2.7 2.5"/><circle cx="18.2" cy="5.8" r=".5"/>',
+        "db": '<ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v13c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-13M4.5 12c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8"/>',
+        "brain": '<path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2.5 2.5 0 0 0-3-1zM15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/>',
         "trophy": '<path d="M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M7 6H4a3 3 0 0 0 3 4M17 6h3a3 3 0 0 1-3 4M12 14v4M8 21h8M9 18h6"/>',
     }
     return (

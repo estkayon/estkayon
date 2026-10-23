@@ -6,12 +6,13 @@ Outputs (written to --out, default ./dist):
 
 Data sources, in order:
   1. GitHub GraphQL API   (needs a token: GITHUB_TOKEN in Actions, or a PAT
-                           in GH_STATS_TOKEN to include private contributions)
+                           in GH_STATS_TOKEN or METRICS_TOKEN for private contributions)
   2. Public fallback      contribution calendar page + REST repo languages
 
 Usage:
   python scripts/generate_voyage.py --user estkayon --out dist
   python scripts/generate_voyage.py --demo        # sample data, for previews
+  python scripts/generate_voyage.py --frame-snake snk/snake.svg dist/snake.svg
 """
 from __future__ import annotations
 
@@ -361,15 +362,43 @@ def best_day(s, stamp: str) -> str:
     return svg(W, H, body, fonts=("JBM", "JBMB"), title="Best day and streaks")
 
 
+def frame_snake(src: str, dest: str) -> None:
+    """Wrap Platane/snk's SVG in the dark dashboard panel, like the design's snake strip."""
+    raw = open(src, encoding="utf-8").read()
+    raw = re.sub(r"<\?xml[^>]*>", "", raw).strip()
+    vb = re.search(r'viewBox="([-\d.]+)[ ,]+([-\d.]+)[ ,]+([\d.]+)[ ,]+([\d.]+)"', raw)
+    vw, vh = (float(vb.group(3)), float(vb.group(4))) if vb else (880.0, 192.0)
+    W = 1000
+    SX, SW = 86, 700                       # where the snake sits inside the panel
+    sh = SW * vh / vw
+    H = round(sh + 32)
+    inner = re.sub(r"<svg\b[^>]*>", f'<svg x="{SX}" y="{(H - sh) / 2:.1f}" width="{SW}" height="{sh:.1f}" viewBox="{vb.group(0)[9:-1] if vb else f"0 0 {vw} {vh}"}">', raw, count=1)
+    body = (
+        panel(.5, .5, W - 1, H - 1, 12)
+        + icon("snake", 26, H / 2 - 18, 36, C["green"])
+        + inner
+        + f'<text x="{SX + SW + 22}" y="{H/2 - 4}" class="m" font-size="11" fill="{C["green"]}">GitHub Contribution Snake</text>'
+        + f'<text x="{SX + SW + 22}" y="{H/2 + 14}" class="m" font-size="11" fill="{C["muted"]}">Keep going...'
+        + '<animate attributeName="opacity" values="1;.35;1" dur="2.4s" repeatCount="indefinite"/></text>'
+    )
+    with open(dest, "w", encoding="utf-8") as f:
+        f.write(svg(W, H, body, fonts=("JBM",), title="Contribution snake"))
+    print(f"wrote {dest}")
+
+
 # ------------------------------------------------------------------ main
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--user", default=os.environ.get("GITHUB_USER", "estkayon"))
     ap.add_argument("--out", default="dist")
     ap.add_argument("--demo", action="store_true", help="use sample data (no network)")
+    ap.add_argument("--frame-snake", nargs=2, metavar=("SRC", "DEST"), help="put a snake SVG on the themed panel")
     a = ap.parse_args()
+    if a.frame_snake:
+        frame_snake(*a.frame_snake)
+        return 0
 
-    token = os.environ.get("GH_STATS_TOKEN") or os.environ.get("GITHUB_TOKEN")
+    token = os.environ.get("METRICS_TOKEN") or os.environ.get("GH_STATS_TOKEN") or os.environ.get("GITHUB_TOKEN")
     if a.demo:
         days, langs, colors = demo_data()
         src = "sample data"
