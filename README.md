@@ -90,14 +90,17 @@ Time-series forecasting with a full MLOps delivery pipeline: versioned data, tra
 </td>
 <td width="50%" valign="top">
 
-#### 🛒 [E-commerce Management System](https://github.com/estkayon/Ecommerce-Management-System)
-Full-stack system for real business workflows: a Laravel MVC REST API (PostgreSQL, Sanctum auth, validation) powering a typed Next.js + TypeScript front-end.
+#### 🌊 [FloodCast BD](https://floodcast-bd-jamuna.streamlit.app)
+Physics-informed flood nowcasting pipeline for Bangladesh's Jamuna River Basin. 27 experiments (XGBoost, LSTM, LSTM+Physics) with 1-3 day lead time predictions, tracked with MLflow.
 
-![Laravel](https://img.shields.io/badge/Laravel-0B1427?style=flat-square&logo=laravel&logoColor=F4A63A)
-![PHP](https://img.shields.io/badge/PHP-0B1427?style=flat-square&logo=php&logoColor=F4A63A)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-0B1427?style=flat-square&logo=postgresql&logoColor=F4A63A)
-![TypeScript](https://img.shields.io/badge/TypeScript-0B1427?style=flat-square&logo=typescript&logoColor=F4A63A)
-![Next.js](https://img.shields.io/badge/Next.js-0B1427?style=flat-square&logo=nextdotjs&logoColor=F4A63A)
+![Python](https://img.shields.io/badge/Python-0B1427?style=flat-square&logo=python&logoColor=F4A63A)
+![PyTorch](https://img.shields.io/badge/PyTorch-0B1427?style=flat-square&logo=pytorch&logoColor=F4A63A)
+![XGBoost](https://img.shields.io/badge/XGBoost-0B1427?style=flat-square&logo=xgboost&logoColor=F4A63A)
+![Streamlit](https://img.shields.io/badge/Streamlit-0B1427?style=flat-square&logo=streamlit&logoColor=F4A63A)
+![FastAPI](https://img.shields.io/badge/FastAPI-0B1427?style=flat-square&logo=fastapi&logoColor=F4A63A)
+![MLflow](https://img.shields.io/badge/MLflow-0B1427?style=flat-square&logo=mlflow&logoColor=F4A63A)
+![Docker](https://img.shields.io/badge/Docker-0B1427?style=flat-square&logo=docker&logoColor=F4A63A)
+![DVC](https://img.shields.io/badge/DVC-0B1427?style=flat-square&logo=dvc&logoColor=F4A63A)
 
 </td>
 </tr>
