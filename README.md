@@ -90,7 +90,7 @@ Time-series forecasting with a full MLOps delivery pipeline: versioned data, tra
 </td>
 <td width="50%" valign="top">
 
-#### 🌊 [FloodCast BD](https://floodcast-bd-jamuna.streamlit.app)
+#### 🌊 [FloodCast BD](https://github.com/estkayon/FloodCast-BD-Jamuna)
 Physics-informed flood nowcasting pipeline for Bangladesh's Jamuna River Basin. 27 experiments (XGBoost, LSTM, LSTM+Physics) with 1-3 day lead time predictions, tracked with MLflow.
 
 ![Python](https://img.shields.io/badge/Python-0B1427?style=flat-square&logo=python&logoColor=F4A63A)
